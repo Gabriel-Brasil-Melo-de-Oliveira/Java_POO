@@ -96,11 +96,25 @@ public class Disciplina {
 
 public ArrayList<Aluno> encontrarMelhoresAlunos(int quantidade){
     double maiorMedia = listaDeAlunos.get(0).calcularMediaGeral();
-    for(Aluno pessoa: listaDeAlunos){
-        if(pessoa.calcularMediaGeral() > maiorMedia){
-            maiorMedia = pessoa
+    Aluno alunoTemp;
+    for(int i = 0; i < listaDeAlunos.size(); i++){
+        for(int w = i +1; w < listaDeAlunos.size(); w++){
+            if(listaDeAlunos.get(i).calcularMediaGeral() < listaDeAlunos.get(w).calcularMediaGeral()){
+                alunoTemp = listaDeAlunos.get(i);
+                listaDeAlunos.remove(i);
+                listaDeAlunos.add(w, alunoTemp);
+            }
         }
     }
+    ArrayList<Aluno> novaListaMelhores = new ArrayList<Aluno>(quantidade);
+    for(int i= 0; i < quantidade;i++){
+        novaListaMelhores.add((listaDeAlunos.get(i)));
+    }
+    for(Aluno pessoa: novaListaMelhores){
+        System.out.println(pessoa + "\nSua media foi de: " + pessoa.calcularMediaGeral());
+    }
+    return novaListaMelhores;
+    
 }
 
 }

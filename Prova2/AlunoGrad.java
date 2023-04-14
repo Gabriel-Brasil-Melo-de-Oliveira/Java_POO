@@ -20,4 +20,8 @@ public class AlunoGrad extends Aluno {
         return mediaGeral;
     }
 
+    public String toString(){
+        return super.toString() + "\nAluno de Graduação " + "\nSemestre de entrada: " + this.semestreDeEntrada;
+    }
+
 }

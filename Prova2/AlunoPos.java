@@ -18,4 +18,8 @@ public class AlunoPos extends Aluno {
         mediaGeral = (((super.getNota1()*4)+(super.getNota2()*6))/10);
         return mediaGeral;
     }
+
+    public String toString(){
+        return super.toString() + "\nAluno da Pós " + "\nNome do orientador: " + this.nomeOrientador;
+    }
 }
