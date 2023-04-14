@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 import javax.management.NotCompliantMBeanException;
 
 import java.util.ArrayList;
@@ -15,15 +13,15 @@ public class Banco {
         this.listaDeContas = new ArrayList<Conta>();
     }
 
-    public boolean procurarConta(int numeroDaConta){
+    public Conta procurarConta(int numeroDaConta){
         for(Conta c: listaDeContas){
             if(c.getNumeroDaConta() == numeroDaConta){
                 System.out.println("\nConta encontrada: " + c + "\n");
-                return true;
+                return c;
             }
         }
         System.out.println("\nConta não encontrada!");
-        return false;
+        return null;
     }
 
     public void adicionarConta(Conta novaConta) {
@@ -35,6 +33,4 @@ public class Banco {
         this.listaDeContas.clear();
     }
 
-    
-    //parei em cadastrar uuma nova conta!! VAI DA CERTO GABRIEL TU É FODA
 }
