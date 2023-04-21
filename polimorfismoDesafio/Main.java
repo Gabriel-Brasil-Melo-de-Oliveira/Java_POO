@@ -15,7 +15,7 @@ public class Main {
         System.out.println(servidor1);
         servidor1.calcularSalario();
         System.out.println(servidor1);*/
-        Professor professor1 = new Professor("Gabriel",12,"mestre",0,false);
+        Professor professor1 = new Professor("Gabriel",12,"mestre",1110,false);
         Secretario secretario1 = new Secretario("Jose", 10, 40);
         Servidor servidor1 = new Servidor("Igor", 0, 10);
         Professor professor2 = new Professor("Carla", 821, "doutor", 20, true);
@@ -36,6 +36,9 @@ public class Main {
         uece.maiorSalario();
 
         uece.folhaDePagamento();
+
+        uece.miar();
+        
 
     } 
 }

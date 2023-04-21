@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Universidade {
+public class Universidade implements teste {
     private String nome;
     private ArrayList<Funcionario> listaFuncionario;
 
