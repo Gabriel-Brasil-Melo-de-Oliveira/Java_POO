@@ -28,4 +28,21 @@ public class Universidade {
         }
         System.out.println("\nVALOR FINAL PAGO: " + valorFinal);
     }
+
+    public void maiorSalario(){
+        Funcionario aux;
+        Funcionario aux2;
+        for(int i = 0; i < listaFuncionario.size();i++){
+            for(int j = 0; j < listaFuncionario.size(); j++){
+                if(this.listaFuncionario.get(i).getSalarioMinimo() > this.listaFuncionario.get(j).getSalarioMinimo()){
+                    aux = this.listaFuncionario.get(i);
+                    aux2 = this.listaFuncionario.get(j);
+                    this.listaFuncionario.remove(i);
+                    this.listaFuncionario.add(i, aux2);
+                    this.listaFuncionario.remove(j);
+                    this.listaFuncionario.add(j,aux);
+                }
+            }
+        }
+    }
 }
