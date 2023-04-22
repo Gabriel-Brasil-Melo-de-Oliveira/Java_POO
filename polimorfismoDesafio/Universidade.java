@@ -45,4 +45,40 @@ public class Universidade implements teste {
             }
         }
     }
+
+    public void ordenarOrdemAlfabetica(){
+        String alfabeto = "ABCDEFGHIJKLMNOPQRSTUWVXYZ";
+        Funcionario aux;
+        for(int i = 0; i < listaFuncionario.size();i++){
+            for(int w = i+1; w < listaFuncionario.size();w++){
+                String nome = listaFuncionario.get(i).getNome();
+                String primeiraLetra = nome.substring(0,1).toUpperCase();
+                int posicao = alfabeto.indexOf(primeiraLetra);
+
+                String nome2 = listaFuncionario.get(w).getNome();
+                String primeiraLetra2 = nome2.substring(0,1).toUpperCase();
+                int posicao2 = alfabeto.indexOf(primeiraLetra2);
+
+                if(posicao2 < posicao){
+                aux = listaFuncionario.get(i);
+                listaFuncionario.set(i, listaFuncionario.get(w));
+                listaFuncionario.set(w, aux);
+                }
+            }
+        }
+    }
+
+    public void outraFormaDeOrdenar(){//IMPORTANTE
+        for(int i = 0; i < listaFuncionario.size();i++){
+            for(int w = i +1; w < listaFuncionario.size();w++){
+                String nome1 = listaFuncionario.get(i).getNome();
+                String nome2 = listaFuncionario.get(w).getNome();
+                if(nome1.compareTo(nome2) > 0){
+                    Funcionario aux = listaFuncionario.get(i);
+                    listaFuncionario.set(i, listaFuncionario.get(w));
+                    listaFuncionario.set(w, aux);
+                }
+            }
+        }
+    }
 }

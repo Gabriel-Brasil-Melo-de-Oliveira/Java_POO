@@ -33,9 +33,14 @@ public class Main {
         for(int i = 0; i < uece.getLista().size(); i++){
             uece.getLista().get(i).calcularSalario();
         }
-        uece.maiorSalario();
+       // uece.maiorSalario();
+
+        //uece.ordenarOrdemAlfabetica();
+
+        uece.outraFormaDeOrdenar();
 
         uece.folhaDePagamento();
+
 
         uece.miar();
         
