@@ -31,6 +31,7 @@ public class Professor extends Pessoa {
                 super.getLista().remove(i);
             }
         }
+        System.out.println("\nMulta: " + taxaMulta);
         return taxaMulta;
     }
 

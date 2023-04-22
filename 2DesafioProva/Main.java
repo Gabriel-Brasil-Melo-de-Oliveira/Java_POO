@@ -18,6 +18,14 @@ public class Main {
         Professor professor1 = new Professor("Rodrigo", 01,"doutor");
 
         professor1.pedirEmprestado(livro1);
+        professor1.pedirEmprestado(livro2);
+        professor1.pedirEmprestado(livro3);
+        professor1.pedirEmprestado(livro4);
+        professor1.pedirEmprestado(livro5);
+
+        professor1.devolverLivro(livro3,10);
+        professor1.devolverLivro(20);
+        professor1.mostrarLista();
 
     }
 }
