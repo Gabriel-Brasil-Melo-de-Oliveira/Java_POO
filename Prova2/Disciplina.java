@@ -140,4 +140,19 @@ public void maiorMedia(){
     System.out.println(aux);
 }
 
+    public void mostrarNomes(){
+        for(Aluno aln: this.listaDeAlunos){
+            if(aln instanceof AlunoGrad){
+                AlunoGrad alunoGrad = (AlunoGrad) aln;
+                String nome = alunoGrad.qualNome();
+                System.out.println("Primeiro nome: " + nome);
+            }else if(aln instanceof AlunoPos){
+                AlunoPos alunoPos = (AlunoPos) aln;
+                String nome = alunoPos.qualNome();
+                System.out.println("Segundo nome: " + nome);
+
+            }
+        }
+    }
+
 }

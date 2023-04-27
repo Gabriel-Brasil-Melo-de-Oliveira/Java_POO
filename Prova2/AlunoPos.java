@@ -22,4 +22,11 @@ public class AlunoPos extends Aluno {
     public String toString(){
         return super.toString() + "\nAluno da Pós " + "\nNome do orientador: " + this.nomeOrientador;
     }
+
+    @Override
+    public String qualNome(){
+        String[] partesNome = super.getNome().split(" ");
+        String segundoNome = partesNome[1] + ", " + super.getNome().substring(0,1) + ".";
+        return segundoNome;
+    }
 }

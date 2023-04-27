@@ -30,6 +30,7 @@ public abstract class Aluno {
     }
 
     public abstract double calcularMediaGeral();
+    public abstract String qualNome();
 
     public String toString(){
         return "\nNome: " + this.nome + "\n nota 1 e nota 2: " + this.nota1 + " " + this.nota2;

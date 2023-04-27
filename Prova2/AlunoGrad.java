@@ -24,4 +24,11 @@ public class AlunoGrad extends Aluno {
         return super.toString() + "\nAluno de Graduação " + "\nSemestre de entrada: " + this.semestreDeEntrada;
     }
 
+    @Override
+    public String qualNome(){
+        String[] partesNome = super.getNome().split(" ");
+        String primeiroNome = partesNome[0];
+        return primeiroNome;
+    }
+
 }
