@@ -117,4 +117,27 @@ public ArrayList<Aluno> encontrarMelhoresAlunos(int quantidade){
     
 }
 
+public void maiorMedia(){
+    double maiorMedia = 0;
+    Aluno aux = this.listaDeAlunos.get(0);
+    for(Aluno aln: this.listaDeAlunos){
+        if(aln instanceof AlunoGrad){
+            AlunoGrad alunoGrad = (AlunoGrad) aln;
+            double novaNota = alunoGrad.calcularMediaGeral();
+            if(novaNota > maiorMedia){
+                maiorMedia = novaNota;
+                aux = aln;
+            }
+        }else if(aln instanceof AlunoPos){
+            AlunoPos alunoPos = (AlunoPos) aln;
+            double novaNota = alunoPos.calcularMediaGeral();
+            if(novaNota > maiorMedia){
+                maiorMedia = novaNota;
+                aux = aln;
+            }
+        }
+    }
+    System.out.println(aux);
+}
+
 }

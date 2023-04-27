@@ -30,19 +30,24 @@ public class Main {
         uece.adicionarFuncionario(professor2);
         uece.adicionarFuncionario(secretario2);
 
-        for(int i = 0; i < uece.getLista().size(); i++){
-            uece.getLista().get(i).calcularSalario();
-        }
+       // for(int i = 0; i < uece.getLista().size(); i++){
+        //    uece.getLista().get(i).calcularSalario();
+       // }
        // uece.maiorSalario();
 
         //uece.ordenarOrdemAlfabetica();
 
-        uece.outraFormaDeOrdenar();
+       // uece.outraFormaDeOrdenar();
 
-        uece.folhaDePagamento();
+       // uece.folhaDePagamento();
 
 
-        uece.miar();
+        //uece.miar();
+
+        //uece.maiorSalario();
+        //uece.folhaDePagamento();
+
+        
         
 
     } 

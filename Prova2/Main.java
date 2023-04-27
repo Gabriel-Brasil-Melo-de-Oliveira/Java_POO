@@ -4,9 +4,9 @@ public class Main {
         Disciplina poo = new Disciplina("Programação Orientada a Objetos");
 
         AlunoGrad pessoaGrad = new AlunoGrad("Gabriel", 5,0,"2022.2");
-        AlunoGrad pessoaGrad2 = new AlunoGrad("Jose", 8,8,"2022.3");
+        AlunoGrad pessoaGrad2 = new AlunoGrad("Jose", 10,10,"2022.3");
 
-        AlunoPos pessoaPos = new AlunoPos("Victor", 9,10,"Claudia");
+        AlunoPos pessoaPos = new AlunoPos("Victor", 0,10,"Claudia");
 
         poo.adicionarAluno(pessoaGrad);
         poo.adicionarAluno(pessoaPos);
@@ -18,6 +18,8 @@ public class Main {
         poo.calcularMediaTotal("Ambos");
 
         poo.encontrarMelhoresAlunos(3);
+
+        poo.maiorMedia();
     }    
 }
 
