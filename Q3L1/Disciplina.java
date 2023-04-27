@@ -1,4 +1,8 @@
 
+
+
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -101,6 +105,20 @@ public class Disciplina {
                    listaDeAlunos.remove(w);
                    listaDeAlunos.add(w,aux);
                 }   
+            }
+        }
+    }
+
+    public void odernarOrdemAlfabetica(){
+        for(int i = 0; i < this.listaDeAlunos.size(); i ++){
+            for(int j = i + 1;j < this.listaDeAlunos.size();j++){
+                String nome1 = this.listaDeAlunos.get(i).getNome();
+                String nome2 = this.listaDeAlunos.get(j).getNome();
+                if(nome1.compareTo(nome2) > 1){
+                    Aluno aux = this.listaDeAlunos.get(i);
+                    this.listaDeAlunos.set(i,this.listaDeAlunos.get(j));
+                    this.listaDeAlunos.set(j,aux);
+                }
             }
         }
     }

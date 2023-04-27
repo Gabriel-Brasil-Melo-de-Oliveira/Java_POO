@@ -1,4 +1,4 @@
-public class Aluno extends Pessoa {
+public class Aluno extends Pessoa implements Miar {
     private String cursoMatriculado;
 
     public String getCursoMatriculado(){return this.cursoMatriculado;}
@@ -52,4 +52,13 @@ public class Aluno extends Pessoa {
             System.out.println(livro);
         }
     }
+
+    public String toString(){
+        return "\nCurso matriculado: " + this.cursoMatriculado;
+    }
+
+    public void miar(){
+        System.out.println("MIAAAUUU");
+    } 
+
 }

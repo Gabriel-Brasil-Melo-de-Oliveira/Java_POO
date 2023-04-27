@@ -27,5 +27,10 @@ public class Main {
         professor1.devolverLivro(20);
         professor1.mostrarLista();
 
+        Miar alunoTeste = new Aluno("Gato",2,"Gatolandia");
+        System.out.println(alunoTeste);
+        alunoTeste.miar();
+        System.out.println(livro1);
+
     }
 }
