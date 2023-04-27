@@ -1,4 +1,6 @@
 import java.util.Scanner;
+//package MatrizDeIntRefeita;
+
 public class MatrizDeInteiros {
     private int[][] matriz;
 
@@ -32,10 +34,10 @@ public class MatrizDeInteiros {
             System.out.println("\nColuna fora do alcance");
         }
         Scanner cin = new Scanner(System.in);
-        System.out.println("\nDigite o valor para a linha " + linha+1 + " e coluna: " + coluna+1);
+        System.out.println("\nDigite o valor para a linha " + (linha+1) + " e coluna: " + (coluna+1));
         int valor = cin.nextInt();
         this.matriz[linha][coluna] = valor;
-        cin.close(); 
+
     }
 
     public void preencherMatriz(){
@@ -47,7 +49,6 @@ public class MatrizDeInteiros {
                 this.matriz[i][j] = valor;
             }
         }
-        cin.close();
     }
 
     public void somarElementos(){
